@@ -3,7 +3,7 @@
 #Видео-Обзор: https://rutube.ru/video/private/5ff94a5a1225eb823e42f60688309018/?p=GuYQWhmpT8DKDV6qhjqB-Q
 
 
-#Фронтенд-часть для node_modules
+#Для node_modules
 
 npm i styled-components
 npm i reducer    
