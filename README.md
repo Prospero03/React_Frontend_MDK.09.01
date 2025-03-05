@@ -18,3 +18,8 @@ npm i bcrypt npm i express npm i mongoose npm i mongodb npm i cors
 
 npm install --save-dev ajv@^7   
 //Если не работает create-react-app
+
+
+npm i styled-components reducer react-currency-format @stripe/react-stripe-js @stripe/stripe-js react-router-dom axios 
+
+npm i bcrypt express mongoose mongodb сors
