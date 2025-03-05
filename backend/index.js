@@ -16,7 +16,7 @@ app.use(cors());
 
 const connection_url =
   "mongodb://127.0.0.1:27017";
-
+  console.log("MongoDB подключена")
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -65,13 +65,13 @@ app.post("/auth/signup", async (req, res) => {
   const user_exist = await Users.findOne({ email: email });
 
   if (user_exist) {
-    res.send({ message: "The Email is already in use !" });
+    res.send({ message: "Это Email уже используется!" });
   } else {
     Users.create(userDetail, (err, result) => {
       if (err) {
         res.status(500).send({ message: err.message });
       } else {
-        res.send({ message: "User Created Succesfully" });
+        res.send({ message: "Пользователь успешно создан" });
       }
     });
   }
@@ -88,10 +88,10 @@ app.post("/auth/login", async (req, res) => {
     if (await bcrypt.compare(password, userDetail.password)) {
       res.send(userDetail);
     } else {
-      res.send({ error: "invaild Password" });
+      res.send({ error: "Пароль неверен" });
     }
   } else {
-    res.send({ error: "user is not exist" });
+    res.send({ error: "Вы успешно вошли" });
   }
 });
 
@@ -113,13 +113,13 @@ app.post("/auth/edit", async (req, res) => {
   const user_exist = await Users.findOne({ email: email });
 
   if (user_exist) {
-    res.send({ message: "The Email is already in use !" });
+    res.send({ message: "Это Email уже используется!" });
   } else {
     Users.create(userDetail, (err, result) => {
       if (err) {
         res.status(500).send({ message: err.message });
       } else {
-        res.send({ message: "User Created Succesfully" });
+        res.send({ message: "Пользователь успешно создан" });
       }
     });
   }
@@ -131,7 +131,7 @@ app.post("/auth/edit", async (req, res) => {
 
 app.post("/payment/create", async (req, res) => {
   const total = req.body.amount;
-  console.log("Payment Request recieved for this ruppess", total);
+  console.log("Получен запрос на оплату этого заказа", total);
 
   const payment = await stripe.paymentIntents.create({
     amount: total * 100,
