@@ -1,6 +1,6 @@
 #Задание на экзамене МДК 09.01.
 
-#Видео-Обзор: https://rutube.ru/video/private/5ff94a5a1225eb823e42f60688309018/?p=GuYQWhmpT8DKDV6qhjqB-Q
+#Видео-Обзор: https://kwork.ru/portfolio/17196508
 
 
 #Frontend - node_modules
