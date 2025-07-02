@@ -1,6 +1,6 @@
 #Задание на экзамене МДК 09.01.
 
-#Видео-Обзор: https://kwork.ru/portfolio/17196508
+#Видео-Обзор: (https://kwork.ru/portfolio/17599272)
 
 
 #Frontend - node_modules
